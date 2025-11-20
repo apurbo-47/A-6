@@ -6,29 +6,36 @@
     <title>English Janala</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style>
+        .active {
+            background: #422AD5;
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <nav class="grid grid-cols-2 justify-between w-auto h-24 bg-[#C6BDBD]">
-            <div class="flex items-center text-center py-3 px-20 gap-1">
+        <nav class="flex items-center justify-between w-auto h-24 bg-[#C6BDBD] py-3 px-20">
+            <div class="flex items-center text-center gap-1">
                 <h3 class="text-xl font-semibold text-[#18181B]">English</h3>
                 <img class="w-10 h-10" src="assets/logo.png" alt="">
                 <h3 class="text-xl font-semibold text-[#18181B]">জানালা</h3>
             </div>
 
-            <div class="flex items-center text-center py-3 px-20 gap-4 ">
+            <div class="flex items-center text-center gap-4 ">
                 <button class="w-[80px] h-[40px] btn btn-outline btn-primary text-sm font-semibold">FAQ</button>
                 <button class="w-[80px] h-[40px] btn btn-outline btn-primary text-sm font-semibold">Learn</button>
                 <button class="w-[80px] h-[40px] btn btn-outline btn-primary text-sm font-semibold">Logout</button>
             </div>
         </nav>
 
-
-        <section class="grid grid-cols-2 justify-between">
+            <!-- hero section -->
+        <section class="grid grid-cols-2 items-center justify-between">
     <div class="px-24">
-    <h1 class="text-5xl font-bold pt-[215px] pb-6">English is Easy!!</h1>
+    <h1 class="text-5xl font-bold pt-[215px] pb-6"><span class="text-[#00BCFF]">English</span> is Easy!!</h1>
 
-   <p class="text-2xl font-medium pb-10">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
+   <p class="text-2xl font-medium pb-10">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ </p>
 
         <div>
             <input type="text" placeholder="Enter Your Name" class="input" />
@@ -45,12 +52,110 @@
    
    </div>
 
-     <div class="hero-img">
+     <div class="hero-img ">
      <img src="assets/hero-student.png" alt="Hero Image" />
     </div>
        </section>
-       
+
     </header>
-    
+
+    <main>
+        <!-- learn section -->
+        <section>
+            <h3 class="text-4xl font-bold text-center text-[#18181B] pb-10 pt-[200px]">
+            <span class="text-[#00BCFF]">Let's</span> Learn Vocabularies</h3>
+            <div>
+                 <nav id="category-container" class="flex py-10 justify-center gap-6">
+
+         <!-- <button id="btn-all" onclick="loadCard()" class="btn btn-sm text-sm font-medium hover:bg-[#422AD5] hover:text-white">Lesson-1</button> -->
+       
+                  </nav>
+            </div>
+        </section>
+
+        <section class="w-11/12 mx-auto grid grid-cols-3 gap-7 justify-center items-center text-center" id="card-container"></section>
+
+        <!-- FAQ SECTION -->
+        <section>
+            <h3 class="text-4xl font-bold text-center text-[#18181B] pb-20 pt-[200px]">
+            <span class="text-[#00BCFF]">Frequently</span> Asked Questions</h3>
+
+            <div class="px-24 pb-28 ">
+
+                <div class="collapse collapse-plus bg-[#F8F8F8] border border-base-300 ">
+              <input type="radio" name="my-accordion-3" checked="checked" />
+             <div class="collapse-title font-semibold">1. How can I start learning English on this website?</div>
+             <div class="collapse-content text-sm">If you want, I can make a daily or weekly English study plan for you based on your goals.</div>
+                </div>
+                <br>
+                <div class="collapse collapse-plus bg-[#F8F8F8] border border-base-300 ">
+              <input type="radio" name="my-accordion-3" checked="checked" />
+             <div class="collapse-title font-semibold">2. Is this website free to use?</div>
+             <div class="collapse-content text-sm">You can start by exploring our beginner lessons, interactive exercises, and quizzes. We also offer structured courses to guide you step by step.</div>
+                </div>
+                <br>
+                <div class="collapse collapse-plus bg-[#F8F8F8] border border-base-300 ">
+              <input type="radio" name="my-accordion-3" checked="checked" />
+             <div class="collapse-title font-semibold">3. Do I need to create an account?</div>
+             <div class="collapse-content text-sm">You can use ChatGPT without creating an account, but only with limited features. </div>
+                </div>
+                <br>
+                <div class="collapse collapse-plus bg-[#F8F8F8] border border-base-300 ">
+              <input type="radio" name="my-accordion-3" checked="checked" />
+             <div class="collapse-title font-semibold">4. How can I build my English vocabulary?</div>
+             <div class="collapse-content text-sm">Building your English vocabulary can be easy and enjoyable if you follow the right methods. Here are some effective ways to improve quickly. </div>
+                </div>
+                <br>
+                <div class="collapse collapse-plus bg-[#F8F8F8] border border-base-300 ">
+              <input type="radio" name="my-accordion-3" checked="checked" />
+             <div class="collapse-title font-semibold">5. Do you offer certificates for completed courses?</div>
+             <div class="collapse-content text-sm">Other courses (e.g. from Cert Solution) do provide a “certificate of completion” after you finish.  </div>
+                </div>
+
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="w-full h-[325px] flex items-center justify-between border-2 border-[#FFEBEB] px-20">
+        <section class=" ">
+            <div class="flex items-center text-center gap-1">
+                <h3 class="text-xl font-semibold text-[#18181B]">English</h3>
+                <img class="w-10 h-10" src="assets/logo.png" alt="">
+                <h3 class="text-xl font-semibold text-[#18181B]">জানালা</h3>
+            </div>
+            <h5 class="pt-5 pb-2 font-medium text-xl">ইংরেজি শিখুন সহজে</h5>
+            <p class="text-sm font-normal">Providing ED-Tech Applications since 2025</p>
+        </section>
+
+        <section>
+                <p class="text-sm font-semibold">Follow us</p>
+                <div class="flex gap-4 pt-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 512 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5l0-170.3-52.8 0 0-78.2 52.8 0 0-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4l0 70.8c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2l0 27.8 83.6 0-14.4 78.2-69.3 0 0 175.9C413.8 494.8 512 386.9 512 256z"/></svg>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 576 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M549.7 124.1C543.5 100.4 524.9 81.8 501.4 75.5 458.9 64 288.1 64 288.1 64S117.3 64 74.7 75.5C51.2 81.8 32.7 100.4 26.4 124.1 15 167 15 256.4 15 256.4s0 89.4 11.4 132.3c6.3 23.6 24.8 41.5 48.3 47.8 42.6 11.5 213.4 11.5 213.4 11.5s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zM232.2 337.6l0-162.4 142.7 81.2-142.7 81.2z"/></svg>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 448 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M224.3 141a115 115 0 1 0 -.6 230 115 115 0 1 0 .6-230zm-.6 40.4a74.6 74.6 0 1 1 .6 149.2 74.6 74.6 0 1 1 -.6-149.2zm93.4-45.1a26.8 26.8 0 1 1 53.6 0 26.8 26.8 0 1 1 -53.6 0zm129.7 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM399 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+                </div>
+        </section>
+    </footer>
+
+    <!-- Open the modal using ID.showModal() method -->
+<!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button>
+<dialog id="card_details" class="modal">
+  <div class="modal-box">
+    <h3 class="text-lg font-bold">Hello!</h3>
+    <p class="py-4">Press ESC key or click the button below to close</p>
+    <div class="modal-action">
+      <form method="dialog">
+        <!- if there is a button in form, it will close the modal -->
+        <!-- <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog> --> 
+
+    <script src="script/index.js"></script>
 </body>
 </html>
