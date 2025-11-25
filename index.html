@@ -15,7 +15,7 @@
     </style>
 </head>
 <body>
-    <header>
+    <header class="sticky top-0">
         <nav class="flex items-center justify-between w-auto h-24 bg-[#C6BDBD] py-3 px-20">
             <div class="flex items-center text-center gap-1">
                 <h3 class="text-xl font-semibold text-[#18181B]">English</h3>
@@ -24,14 +24,17 @@
             </div>
 
             <div class="flex items-center text-center gap-4 ">
-                <button class="w-[80px] h-[40px] btn btn-outline btn-primary text-sm font-semibold">FAQ</button>
-                <button class="w-[80px] h-[40px] btn btn-outline btn-primary text-sm font-semibold">Learn</button>
-                <button class="w-[80px] h-[40px] btn btn-outline btn-primary text-sm font-semibold">Logout</button>
+               <a id="faq" class="w-[80px] h-[40px] btn btn-outline btn-primary text-sm font-semibold" href="#faq-section">FAQ</a>
+               <a class="w-[80px] h-[40px] btn btn-outline btn-primary text-sm font-semibold" href="#learn-section">Learn</a>
+               <a class="w-[80px] h-[40px] btn btn-outline btn-primary text-sm font-semibold" href="#hero-section">Logout</a>
+                
+                
             </div>
         </nav>
+        </header>
 
             <!-- hero section -->
-        <section class="grid grid-cols-2 items-center justify-between">
+        <section id="hero-section" class="grid grid-cols-2 items-center justify-between">
     <div class="px-24">
     <h1 class="text-5xl font-bold pt-[215px] pb-6"><span class="text-[#00BCFF]">English</span> is Easy!!</h1>
 
@@ -45,7 +48,7 @@
         </div>
 
      <div class="py-5">
-        <button class="w-[112px] h-[40px] btn btn-outline btn-primary">Get Started</button>
+        <button class="w-[112px] h-[40px] bg-[#422AD5] text-white btn btn-outline btn-primary">Get Started</button>
     </div>   
 
    
@@ -57,11 +60,11 @@
     </div>
        </section>
 
-    </header>
+    
 
     <main>
         <!-- learn section -->
-        <section>
+        <section id="learn-section">
             <h3 class="text-4xl font-bold text-center text-[#18181B] pb-10 pt-[200px]">
             <span class="text-[#00BCFF]">Let's</span> Learn Vocabularies</h3>
             <div>
@@ -72,12 +75,37 @@
                   </nav>
             </div>
         </section>
+    
 
-        <section class="w-11/12 mx-auto grid grid-cols-3 gap-7 justify-center items-center text-center" id="card-container"></section>
+        <section class="w-11/12 mx-auto grid grid-cols-3 gap-7 justify-center items-center text-center" id="card-container">
+             
+           <div class="col-span-full flex flex-col justify-center items-center text-center bg-[#F8F8F8] h-[204px] py-20">
+            <p class="text-[#79716B] text-sm text-center py-4">আপনি এখনো কোন Lesson Select করেন নি।</p>
+            <h3 class="text-[#292524] text-4xl   text-center font-medium">একটি Lesson Select করুন। </h3>
+        </div>
+            
+
+        
+        </section>
+
+          <dialog id="card_details" class="modal"> 
+  <div class="modal-box">
+   <div id="details-container">
+
+   </div>
+    <div class="modal-action">
+      <form method="dialog"> 
+        <!-- if there is a button in form, it will close the modal -->
+          <button class="btn bg-[#422AD5] text-white">Complete Learning</button> 
+      </form>
+    </div>
+  </div>
+</dialog> 
+
 
         <!-- FAQ SECTION -->
-        <section>
-            <h3 class="text-4xl font-bold text-center text-[#18181B] pb-20 pt-[200px]">
+        <section id="faq-section">
+            <h3 class="text-4xl font-bold text-center text-[#18181B] pb-20 pt-[280px]">
             <span class="text-[#00BCFF]">Frequently</span> Asked Questions</h3>
 
             <div class="px-24 pb-28 ">
@@ -85,31 +113,31 @@
                 <div class="collapse collapse-plus bg-[#F8F8F8] border border-base-300 ">
               <input type="radio" name="my-accordion-3" checked="checked" />
              <div class="collapse-title font-semibold">1. How can I start learning English on this website?</div>
-             <div class="collapse-content text-sm">If you want, I can make a daily or weekly English study plan for you based on your goals.</div>
+             <div class="collapse-content text-sm text-[#62748E]">If you want, I can make a daily or weekly English study plan for you based on your goals.</div>
                 </div>
                 <br>
                 <div class="collapse collapse-plus bg-[#F8F8F8] border border-base-300 ">
               <input type="radio" name="my-accordion-3" checked="checked" />
              <div class="collapse-title font-semibold">2. Is this website free to use?</div>
-             <div class="collapse-content text-sm">You can start by exploring our beginner lessons, interactive exercises, and quizzes. We also offer structured courses to guide you step by step.</div>
+             <div class="collapse-content text-sm text-[#62748E]">You can start by exploring our beginner lessons, interactive exercises, and quizzes. We also offer structured courses to guide you step by step.</div>
                 </div>
                 <br>
                 <div class="collapse collapse-plus bg-[#F8F8F8] border border-base-300 ">
               <input type="radio" name="my-accordion-3" checked="checked" />
              <div class="collapse-title font-semibold">3. Do I need to create an account?</div>
-             <div class="collapse-content text-sm">You can use ChatGPT without creating an account, but only with limited features. </div>
+             <div class="collapse-content text-sm text-[#62748E]">You can use ChatGPT without creating an account, but only with limited features. </div>
                 </div>
                 <br>
                 <div class="collapse collapse-plus bg-[#F8F8F8] border border-base-300 ">
               <input type="radio" name="my-accordion-3" checked="checked" />
              <div class="collapse-title font-semibold">4. How can I build my English vocabulary?</div>
-             <div class="collapse-content text-sm">Building your English vocabulary can be easy and enjoyable if you follow the right methods. Here are some effective ways to improve quickly. </div>
+             <div class="collapse-content text-sm text-[#62748E]">Building your English vocabulary can be easy and enjoyable if you follow the right methods. Here are some effective ways to improve quickly. </div>
                 </div>
                 <br>
                 <div class="collapse collapse-plus bg-[#F8F8F8] border border-base-300 ">
               <input type="radio" name="my-accordion-3" checked="checked" />
              <div class="collapse-title font-semibold">5. Do you offer certificates for completed courses?</div>
-             <div class="collapse-content text-sm">Other courses (e.g. from Cert Solution) do provide a “certificate of completion” after you finish.  </div>
+             <div class="collapse-content text-sm text-[#62748E]">Other courses (e.g. from Cert Solution) do provide a “certificate of completion” after you finish.  </div>
                 </div>
 
 
@@ -159,3 +187,15 @@
     <script src="script/index.js"></script>
 </body>
 </html>
+
+
+
+ <!-- <div class="flex justify-between px-14 "> -->
+        <!-- <div > -->
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" height="14" width="14" viewBox="0 0 512 512">!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.<path d="M256 512a256 256 0 1 0 0-512 256 256 0 1 0 0 512zM224 160a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm-8 64l48 0c13.3 0 24 10.7 24 24l0 88 8 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-80 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l24 0 0-64-24 0c-13.3 0-24-10.7-24-24s10.7-24 24-24z"/></svg> -->
+        <!-- </div> -->
+
+        <!-- <div> -->
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" height="14" width="15.75" viewBox="0 0 576 512">!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.<path d="M48 352l48 0 134.1 119.2c6.4 5.7 14.6 8.8 23.1 8.8 19.2 0 34.8-15.6 34.8-34.8l0-378.4c0-19.2-15.6-34.8-34.8-34.8-8.5 0-16.7 3.1-23.1 8.8L96 160 48 160c-26.5 0-48 21.5-48 48l0 96c0 26.5 21.5 48 48 48zM367 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z"/></svg> -->
+        <!-- </div> -->
+    <!-- </div> -->
